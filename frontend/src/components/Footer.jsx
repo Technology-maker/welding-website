@@ -39,12 +39,7 @@ const Footer = () => {
             <div className="space-y-4 text-gray-300">
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2 text-accent" />
-                <a
-                  href="ajaywelder9352@gmail.com"
-                  className="hover:text-accent transition"
-                >
-                  ajaywelder9352@gmail.com
-                </a>
+                ajaywelder9352@gmail.com
               </div>
               <div className="flex items-start">
                 <MapPin className="w-4 h-4 mr-2 text-accent mt-0.5" />
