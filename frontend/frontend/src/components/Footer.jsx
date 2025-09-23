@@ -24,7 +24,7 @@ const Footer = () => {
             </p>
             <div className="flex items-center text-sm text-gray-300 space-x-2">
               <Phone className="w-4 h-4 text-accent" />
-              <a href="tel:+919352391913" className="hover:text-accent transition">
+              <a href="tel:+919876543210" className="hover:text-accent transition">
                 +91 9352391913
               </a>
             </div>
@@ -40,10 +40,10 @@ const Footer = () => {
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2 text-accent" />
                 <a
-                  href="ajaywelder9352@gmail.com"
+                  href="mailto:info@shreevinayak.shop"
                   className="hover:text-accent transition"
                 >
-                  ajaywelder9352@gmail.com
+                  info@shreevinayak.shop
                 </a>
               </div>
               <div className="flex items-start">

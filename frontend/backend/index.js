@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cors({
-    origin: ["https://www.shreevinayak.shop/", "http://localhost:5173", "https://welding-website-one.vercel.app"],   // your React app URL
+    origin: ["https://www.shreevinayak.shop/", "http://localhost:5173"],   // your React app URL
     methods: ["GET", "POST"],
     credentials: true
 }))
@@ -20,7 +20,7 @@ app.use(cors({
 app.use('/api', router);
 
 app.get("/", (req, res) => {
-    res.send("Backend is Running !");
+    res.send("hello world");
 })
 
 // server start or port 

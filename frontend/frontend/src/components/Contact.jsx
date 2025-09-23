@@ -25,7 +25,7 @@ const Contact = ({ prompt, contactNow }) => {
         };
 
         try {
-            const res = await fetch("https://welding-website-bhnp.vercel.app/api/booking", {
+            const res = await fetch("http://localhost:3000/api/booking", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
