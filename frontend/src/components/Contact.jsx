@@ -169,7 +169,7 @@ const Contact = ({ prompt, contactNow }) => {
                                             <label className="text-xs font-medium text-foreground mb-2 block uppercase tracking-wide">
                                                 Full Name
                                             </label>
-                                            <input name="name" className="w-full p-3 border border-input bg-background rounded-lg placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/40 transition"
+                                            <input name="name" className="w-full p-3 border border-input bg-background rounded-lg placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/40 transition" required
                                                 placeholder="Your name"
                                             />
                                         </div>
@@ -179,7 +179,7 @@ const Contact = ({ prompt, contactNow }) => {
                                             <label className="text-xs font-medium text-foreground mb-2 block uppercase tracking-wide">
                                                 Phone Number
                                             </label>
-                                            <input name="phone" className="w-full p-3 border border-input bg-background rounded-lg placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/40 transition"
+                                            <input name="phone" className="w-full p-3 border border-input bg-background rounded-lg placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/40 transition" required
                                                 placeholder="Your phone"
                                             />
                                         </div>
@@ -193,7 +193,7 @@ const Contact = ({ prompt, contactNow }) => {
                                         <label className="text-xs font-medium text-foreground mb-2 block uppercase tracking-wide">
                                             Full Address
                                         </label>
-                                        <input name="address" type="text" className="w-full p-3 border border-input bg-background rounded-lg placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/40 transition" placeholder="House No,Village,City,State" />
+                                        <input name="address" type="text" className="w-full p-3 border border-input bg-background rounded-lg placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/40 transition" placeholder="House No,Village,City,State" required />
                                     </div>
 
 
@@ -214,7 +214,7 @@ const Contact = ({ prompt, contactNow }) => {
                                         <label className="text-xs font-medium text-foreground mb-2 block uppercase tracking-wide">
                                             Service Required
                                         </label>
-                                        <select name="subject" className="w-full p-3 border border-input bg-background rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/30 transition">
+                                        <select name="subject" className="w-full p-3 border border-input bg-background rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/30 transition" required>
                                             <option>Select a service</option>
                                             <option>Metal Gates</option>
                                             <option>Roofing Sheets</option>
