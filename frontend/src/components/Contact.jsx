@@ -234,7 +234,7 @@ const Contact = ({ prompt, contactNow }) => {
                                             Project Details
                                         </label>
                                         <textarea name="message" placeholder="Tell us about your project requirements..."
-                                            className="w-full p-3 border border-input bg-background rounded-lg min-h-[140px] placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/30 transition"
+                                            required className="w-full p-3 border border-input bg-background rounded-lg min-h-[140px] placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/30 transition"
                                         />
                                     </div>
 
