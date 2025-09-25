@@ -44,8 +44,10 @@ const Header = () => {
                         {/* CTA Button */}
                         <div className="hidden md:flex items-center space-x-4 ">
                             <Button size="lg" className="bg-gradient-accent shadow-accent">
-                                <Phone className="w-4 h-4 mr-2" />
-                                Call Now
+                                <a href="tel:+919352391913" className=" hover:underline">
+                                    <Phone className="w-4 h-4 mr-2" />
+                                    Call Now
+                                </a>
                             </Button>
                         </div>
 

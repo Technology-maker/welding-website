@@ -49,6 +49,8 @@ const Footer = () => {
           </div>
         </div>
 
+        
+
         {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-12 pt-6 text-center">
           <p className="text-gray-400 text-sm">
