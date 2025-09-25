@@ -42,13 +42,13 @@ const Header = () => {
                         </nav>
 
                         {/* CTA Button */}
-                        <div className="hidden md:flex items-center space-x-4 ">
-                            <Button size="lg" className="bg-gradient-accent shadow-accent">
-                                <a href="tel:+919352391913" className=" hover:underline">
+                        <div className="hidden md:flex items-center space-x-4">
+                            <a href="tel:+919352391913">
+                                <Button size="lg" className="bg-gradient-accent shadow-accent flex items-center">
                                     <Phone className="w-4 h-4 mr-2" />
                                     Call Now
-                                </a>
-                            </Button>
+                                </Button>
+                            </a>
                         </div>
 
                         {/* Mobile Menu */}
@@ -78,10 +78,12 @@ const Header = () => {
                                     {item.name}
                                 </a>
                             ))}
-                            <Button size="lg" className="bg-gradient-accent shadow-accent mt-2">
-                                <Phone className="w-4 h-4 mr-2" />
-                                Call Now
-                            </Button>
+                            <a href="tel:+919352391913">
+                                <Button size="lg" className="bg-gradient-accent shadow-accent flex items-center">
+                                    <Phone className="w-4 h-4 mr-2" />
+                                    Call Now
+                                </Button>
+                            </a>
                         </nav>
                     </div>
                 )}
