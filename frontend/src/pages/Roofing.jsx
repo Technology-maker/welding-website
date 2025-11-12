@@ -170,19 +170,20 @@ const Roofing = () => {
     return (
         <div className="min-h-screen flex flex-col bg-gray-50">
             <Header />
-            <main className="flex-grow container mx-auto px-6 py-10">
+            <main className="flex-grow container mx-auto px-1 py-10">
                 <section>
                     <div className="text-center mb-12">
                         <h1 className="text-4xl font-extrabold mb-4 pt-16 text-gray-800">
                             Premium Roofing Collection
                         </h1>
-                        <div className="max-w-2xl text-center mb-8">
+                        <div className="max-w-2xl mx-auto text-center mb-8">
                             <p className="text-gray-700 mb-2">
-                                We design and install durable metal roofing solutions for residential and commercial use.
+                                We craft beautiful and secure metal grills and railings for windows and stairs, available for installation, repair, or custom design.
                             </p>
-                            <ul className="text-gray-600 text-sm mb-2 list-inside ">
-                                <li>✨ Choose from a variety of styles or request a custom design</li>
-                                <li>💵 Pricing depends on design, materials, and size</li>
+
+                            <ul className="text-gray-600 text-sm mb-2 list-none space-y-1">
+                                <li>✨ Explore our designs or bring your own vision</li>
+                                <li>💵 Pricing is based on design, materials, and complexity</li>
                                 <li>📞 <b>Contact us today for a free consultation!</b></li>
                             </ul>
                         </div>
@@ -240,8 +241,16 @@ const Roofing = () => {
                                         </ul>
                                     </div>
 
-                                    <button type="button" className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors mt-auto" >
-                                        <a href="#contact">Request To Order 🚀</a>
+                                    <button
+                                        onClick={() => {
+                                            const contactSection = document.getElementById("contact");
+                                            if (contactSection) {
+                                                contactSection.scrollIntoView({ behavior: "smooth" });
+                                            }
+                                        }}
+                                        className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors mt-auto"
+                                    >
+                                        Request To Order 🚀
                                     </button>
                                 </div>
                             </div>
@@ -250,7 +259,7 @@ const Roofing = () => {
                 </section>
 
                 <div className="mt-16">
-                    <Contact contactNow="Order Now !" prompt="Enter your details" />
+                    <Contact contactNow="Order Now !" prompt="Order Here 🚚" />
                 </div>
             </main>
             <Footer />

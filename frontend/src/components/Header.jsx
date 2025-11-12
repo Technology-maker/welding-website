@@ -13,7 +13,6 @@ const Header = () => {
     ];
 
     return (
-        <>
             <header className="fixed top-0 w-full bg-white  border-b border-border z-50 shadow-card">
                 <div className="container mx-auto px-4 py-4 bg-white">
                     <div className="flex items-center justify-between">
@@ -88,7 +87,7 @@ const Header = () => {
                     </div>
                 )}
             </header>
-        </>
+       
     );
 };
 

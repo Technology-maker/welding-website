@@ -52,7 +52,7 @@ const Contact = ({ prompt, contactNow }) => {
     return (
         <section id="contact" className="pb-20 py-10 bg-gradient-to-b">
             <MessageToaster message={result} type={toastType} />
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto ">
                 <div className="bg-gradient-to-br from-slate-800 via-blue-950 to-indigo-900 p-4 rounded-2xl shadow-2xl ring-1 ring-white/5 overflow-hidden">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
                         {/* Contact Info */}
