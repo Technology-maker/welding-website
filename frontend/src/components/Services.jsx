@@ -91,7 +91,8 @@ const Services = () => {
                         >
                             {/* Swiper for images */}
                             <div className="relative overflow-hidden rounded-t-md">
-                                <Link to={service.route}>
+                                <Link to={service.route}
+                                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                                     <Swiper modules={[Autoplay, Pagination,]} spaceBetween={10} slidesPerView={1} loop={true} autoplay={{ delay: 2000, disableOnInteraction: false }} pagination={{ clickable: true }} className="w-full h-64"  >
                                         {service.images.map((img, idx) => (
                                             <SwiperSlide key={idx}>
@@ -127,7 +128,8 @@ const Services = () => {
                                     ))}
                                 </div>
 
-                                <Link to={service.route}>
+                                <Link to={service.route}
+                                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                                     <Button variant="outline" className="w-full group/btn hover:bg-orange-400 " >
                                         Learn More
                                         <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
