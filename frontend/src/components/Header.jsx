@@ -56,7 +56,7 @@ const Header = () => {
                         </div>
                     </Link>
 
-                    <nav className="hidden items-center gap-1 rounded-full border border-white/75 bg-white/68 p-1 shadow-sm backdrop-blur lg:flex" aria-label="Primary navigation">
+                    <nav className={`hidden items-center gap-1 rounded-full p-1 shadow-sm backdrop-blur lg:flex ${elevated ? "border border-white/75 bg-white/68" : "border border-white/35 bg-white/10"}`} aria-label="Primary navigation">
                         {navItems.map((item) => {
                             const active = getIsActive(item.href);
                             return (
@@ -66,7 +66,9 @@ const Header = () => {
                                     aria-current={active ? "page" : undefined}
                                     className={`rounded-full px-4 py-2 text-sm font-extrabold transition-all duration-300 ${active
                                         ? "bg-slate-950 text-white shadow-sm"
-                                        : "text-slate-700 hover:bg-slate-950 hover:text-white"
+                                        : elevated
+                                            ? "text-slate-700 hover:bg-slate-950 hover:text-white"
+                                            : "text-white hover:bg-white/15"
                                         }`}
                                 >
                                     {item.name}
