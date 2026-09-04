@@ -51,7 +51,7 @@ const Footer = () => {
 
           <div>
             <h4 className="text-sm font-black uppercase text-white/45">Explore</h4>
-            <nav className="mt-5 grid gap-3">
+            <nav className="mt-5 grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-1">
               {links.map((link) => (
                 <a key={link.label} href={link.href} className="group inline-flex items-center gap-2 font-bold text-white/72 transition-colors hover:text-white">
                   {link.label}
