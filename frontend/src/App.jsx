@@ -5,6 +5,7 @@ import Roofing from "./pages/Roofing"
 import Grills from "./pages/Grills"
 import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const location = useLocation();
@@ -43,8 +44,8 @@ function App() {
         <Route path="/roofing" element={<Roofing />} />
         <Route path="/grills" element={<Grills />} />
         <Route path="*" element={<NotFound />} />
-
       </Routes>
+      <Analytics />
     </>
   )
 }
