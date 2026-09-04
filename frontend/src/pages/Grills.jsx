@@ -1,7 +1,4 @@
-import React from "react";
-import Header from "../components/Header";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
+import GalleryCollection from "../components/GalleryCollection";
 import Grills1 from "../assets/stairs-grills-img/img1.jpeg";
 import Grills2 from "../assets/stairs-grills-img/img2.jpeg";
 import Grills3 from "../assets/stairs-grills-img/img3.jpeg";
@@ -56,10 +53,10 @@ const grillsData = [
         src: Grills5,
         alt: "Black belly bar window grill with spherical details",
         title: "Belly Bar Window Grill",
-        description: "A robust security grill with a 'belly' design, providing extra dimension. The studded details on the bars add a touch of industrial style.",
+        description: "A robust security grill with a belly design, providing extra dimension. The studded details on the bars add a touch of industrial style.",
         dimensions: "Customizable to fit your space",
         material: "Solid Steel",
-        features: ["3D 'belly' profile", "Industrial studded design", "Maximum security", "Matte black finish"],
+        features: ["3D belly profile", "Industrial studded design", "Maximum security", "Matte black finish"],
     },
     {
         src: Grills6,
@@ -126,106 +123,19 @@ const grillsData = [
     },
 ];
 
-const GrillsPage = () => {
-    return (
-        <div className="min-h-screen flex flex-col bg-gray-50">
-            <Header />
-            <main className="flex-grow container mx-auto px-1 py-10">
-                <section>
-                    <div className="text-center mb-12">
-                        <h1 className="text-4xl font-extrabold mb-4 pt-16 text-gray-800">
-                            Grills & Railings Collection
-                        </h1>
-                        <div className="max-w-2xl mx-auto text-center mb-8">
-                            <p className="text-gray-700 mb-2">
-                                We craft beautiful and secure metal grills and railings for windows and stairs, available for installation, repair, or custom design.
-                            </p>
-
-                            <ul className="text-gray-600 text-sm mb-2 list-none space-y-1">
-                                <li>✨ Explore our designs or bring your own vision</li>
-                                <li>💵 Pricing is based on design, materials, and complexity</li>
-                                <li>📞 <b>Contact us today for a free consultation!</b></li>
-                            </ul>
-                        </div>
-
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                        {grillsData.map((item, index) => (
-                            <div
-                                key={index}
-                                className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col group"
-                            >
-                                <div className="relative overflow-hidden">
-                                    <img
-                                        src={item.src}
-                                        alt={item.alt}
-                                        className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
-                                        loading="lazy"
-                                    />
-                                </div>
-
-                                <div className="p-6 flex flex-col flex-grow">
-                                    <h2 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">
-                                        {item.title}
-                                    </h2>
-
-                                    <p className="text-gray-700 text-sm mb-4 flex-grow leading-relaxed">
-                                        {item.description}
-                                    </p>
-
-                                    <div className="space-y-3 mb-4">
-                                        <div className="flex items-center text-sm text-gray-600">
-                                            <span className="font-semibold w-24">Dimensions:</span>
-                                            <span>{item.dimensions}</span>
-                                        </div>
-                                        <div className="flex items-center text-sm text-gray-600">
-                                            <span className="font-semibold w-24">Material:</span>
-                                            <span>{item.material}</span>
-                                        </div>
-                                    </div>
-
-                                    <div className="mb-4">
-                                        <h4 className="font-semibold text-sm text-gray-800 mb-2">
-                                            Key Features:
-                                        </h4>
-                                        <ul className="space-y-1">
-                                            {item.features.map((feature, featureIndex) => (
-                                                <li
-                                                    key={featureIndex}
-                                                    className="text-xs text-gray-600 flex items-center"
-                                                >
-                                                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                                                    {feature}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-
-                                    <button
-                                        onClick={() => {
-                                            const contactSection = document.getElementById("contact");
-                                            if (contactSection) {
-                                                contactSection.scrollIntoView({ behavior: "smooth" });
-                                            }
-                                        }}
-                                        className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors mt-auto"
-                                    >
-                                        Request To Order 🚀
-                                    </button>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </section>
-
-                <div className="mt-16">
-                    <Contact contactNow="Order Now !" prompt="Order Here 🚚" />
-                </div>
-            </main>
-            <Footer />
-        </div>
-    );
-};
+const GrillsPage = () => (
+    <GalleryCollection
+        title="Grills & Railings Collection"
+        intro="We craft beautiful and secure metal grills and railings for windows, balconies, and stairs, available for installation, repair, or custom design."
+        bullets={[
+            "Explore our designs or bring your own vision",
+            "Pricing is based on design, materials, and complexity",
+            "Contact us today for a free consultation",
+        ]}
+        items={grillsData}
+        contactNow="Order Now"
+        prompt="Order Here"
+    />
+);
 
 export default GrillsPage;

@@ -7,7 +7,7 @@ import About from '../components/About'
 
 const Index = () => {
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen overflow-x-hidden bg-white">
             <Header />
 
             <main>
@@ -17,11 +17,7 @@ const Index = () => {
                 <Contact />
             </main>
 
-            <footer>
-                <Footer />
-            </footer>
-
-
+            <Footer />
         </div>
     );
 };
