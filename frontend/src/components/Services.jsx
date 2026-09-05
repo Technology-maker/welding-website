@@ -172,7 +172,7 @@ const Services = () => {
                             </p>
                         </div>
                         <a
-                            href="https://wa.me/9352391913"
+                            href="https://wa.me/919352391913"
                             aria-label="Discuss your project on WhatsApp"
                             target="_blank"
                             rel="noopener noreferrer"

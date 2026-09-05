@@ -12,6 +12,7 @@ const Header = () => {
         { name: "Home", href: "/" },
         { name: "About", href: "/#about" },
         { name: "Services", href: "/#services" },
+        { name: "Reviews", href: "/#reviews" },
         { name: "Contact", href: "/#contact" },
     ];
 
@@ -79,7 +80,7 @@ const Header = () => {
 
                     <div className="hidden items-center gap-3 md:flex">
                         <a
-                            href="https://wa.me/9352391913"
+                            href="https://wa.me/919352391913"
                             aria-label="Chat on WhatsApp"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -101,6 +102,7 @@ const Header = () => {
                             variant="outline"
                             size="icon"
                             aria-expanded={isOpen}
+                            aria-controls="mobile-navigation"
                             aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
                             onClick={() => setIsOpen((s) => !s)}
                         >
@@ -111,7 +113,9 @@ const Header = () => {
             </div>
 
             <div
-                className={`lg:hidden overflow-hidden border-t border-slate-200/80 bg-white/95 shadow-xl backdrop-blur-xl transition-all duration-300 ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                id="mobile-navigation"
+                inert={!isOpen}
+                className={`lg:hidden overscroll-contain border-t border-slate-200/80 bg-white/95 shadow-xl backdrop-blur-xl transition-all duration-300 ${isOpen ? "max-h-[calc(100dvh-5rem)] overflow-y-auto opacity-100" : "max-h-0 overflow-hidden opacity-0"
                     }`}
             >
                 <nav className="section-shell flex flex-col gap-2 py-4">
@@ -130,7 +134,7 @@ const Header = () => {
                     ))}
                     <div className="grid grid-cols-1 gap-3 pt-2 sm:grid-cols-2">
                         <a
-                            href="https://wa.me/9352391913"
+                            href="https://wa.me/919352391913"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-3 font-bold text-slate-800"

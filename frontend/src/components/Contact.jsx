@@ -3,6 +3,7 @@ import { ArrowRight, Clock, Mail, MapPin, MessageCircle, Phone, ShieldCheck } fr
 import { useRef, useState } from "react";
 import toast from "react-hot-toast";
 import MessageToaster from "../components/ui/Toaster";
+import { API_URL } from "../lib/api";
 
 const Contact = ({ prompt, contactNow }) => {
     const form = useRef();
@@ -44,13 +45,13 @@ const Contact = ({ prompt, contactNow }) => {
             name: form.current.name.value,
             phone: form.current.phone.value,
             address: form.current.address.value,
-            email: form.current.email.value,
+            ...(form.current.email.value.trim() ? { email: form.current.email.value.trim() } : {}),
             subject: form.current.subject.value,
             message: form.current.message.value,
         };
 
         try {
-            const res = await fetch("https://welding-website-bhnp.vercel.app/api/booking", {
+            const res = await fetch(`${API_URL}/booking`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
@@ -59,7 +60,7 @@ const Contact = ({ prompt, contactNow }) => {
             const data = await res.json();
             toast.dismiss(sendingToastId);
 
-            if (data.success) {
+            if (res.ok && data.success) {
                 toast.success("Message sent successfully.");
                 form.current.reset();
             } else {
@@ -137,7 +138,7 @@ const Contact = ({ prompt, contactNow }) => {
                                                 Emergency Hotline
                                             </a>
                                             <a
-                                                href="https://wa.me/9352391913"
+                                                href="https://wa.me/919352391913"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/10 px-5 py-3 font-black text-white transition-all duration-300 hover:bg-white hover:text-slate-950"
@@ -185,7 +186,7 @@ const Contact = ({ prompt, contactNow }) => {
 
                                     <div>
                                         <label htmlFor="email" className="mb-2 block text-xs font-black uppercase text-slate-600">
-                                            Email Address
+                                            Email Address (optional)
                                         </label>
                                         <input id="email" name="email" type="email" className="field-control" placeholder="your.email@example.com" autoComplete="email" />
                                     </div>

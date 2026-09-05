@@ -38,7 +38,7 @@ const Footer = () => {
                 Call Now
               </a>
               <a
-                href="https://wa.me/9352391913"
+                href="https://wa.me/919352391913"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-white/12 px-4 py-2.5 font-black text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-slate-950"

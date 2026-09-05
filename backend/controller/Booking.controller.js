@@ -4,6 +4,7 @@ dotenv.config();
 
 const Bookingcontroller = async (req, res) => {
     const { name, address, phone, email, subject, message } = req.body;
+    const customerEmail = typeof email === "string" ? email.trim() : "";
 
     try {
         // Setup Gmail transporter
@@ -15,15 +16,15 @@ const Bookingcontroller = async (req, res) => {
             },
         });
 
-        // Email details (includes user's email now)
+        // Customers can submit a booking without an email address.
         let mailOptions = {
             from: process.env.EMAIL_USER,
             to: process.env.EMAIL_USER, // you receive the email yourself
-            replyTo: email, // ✅ allows you to reply directly to the customer
+            ...(customerEmail ? { replyTo: customerEmail } : {}),
             subject: subject || "New Booking Request",
             text: `📩 New Booking Request\n
             👤 Name: ${name}\n
-            📧 Email: ${email}\n
+            📧 Email: ${customerEmail || "Not provided"}\n
             📞 Phone: ${phone}\n
             🏠 Address: ${address}\n
             💭 Message: ${message}`,
